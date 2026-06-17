@@ -19,12 +19,16 @@ const Hero = () => {
       </p>
 
       <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-        <button className="rounded-full bg-cyan-400 px-8 py-3 font-semibold text-slate-950 hover:bg-cyan-300">
-          Start Free Trial
+        <button className="group relative overflow-hidden rounded-full bg-cyan-400 px-8 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-1 hover:bg-cyan-300 hover:shadow-xl hover:shadow-cyan-400/30 active:translate-y-0">
+          <span className="relative z-10">Start Free Trial</span>
+
+          <span className="absolute inset-0 -translate-x-full bg-white/30 transition duration-500 group-hover:translate-x-full" />
         </button>
 
-        <button className="rounded-full border border-slate-700 px-8 py-3 font-semibold text-white hover:bg-slate-900">
-          Watch Demo
+        <button className="group relative overflow-hidden rounded-full border border-slate-700 px-8 py-3 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:bg-slate-900 hover:shadow-xl hover:shadow-cyan-400/10 active:translate-y-0">
+          <span className="relative z-10">Watch Demo</span>
+
+          <span className="absolute inset-0 -translate-x-full bg-cyan-400/10 transition duration-500 group-hover:translate-x-full" />
         </button>
       </div>
       <HeroDashBoard />
