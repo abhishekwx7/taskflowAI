@@ -1,4 +1,5 @@
 import React from "react";
+import HeroDashBoard from "./HeroDashBoard";
 
 const Hero = () => {
   return (
@@ -26,6 +27,7 @@ const Hero = () => {
           Watch Demo
         </button>
       </div>
+      <HeroDashBoard />
     </section>
   );
 };
