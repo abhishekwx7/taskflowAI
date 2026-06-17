@@ -5,7 +5,7 @@ import Features from "./components/Features.jsx";
 import HowItWorks from "./components/HowItWorks.jsx";
 import Testimonials from "./components/Testimonials.jsx";
 import Pricing from "./components/Pricing.jsx";
-import CTA from "./components/CTA.jsx";
+import Cta from "./components/Cta.jsx";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <HowItWorks />
       <Testimonials />
       <Pricing />
-      <CTA />
+      <Cta />
     </main>
   );
 }
