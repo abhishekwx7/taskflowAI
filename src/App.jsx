@@ -2,6 +2,7 @@ import Hero from "./components/Hero.jsx";
 import HeroDashBoard from "./components/HeroDashBoard.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Features from "./components/Features.jsx";
+import HowItWorks from "./components/HowItWorks.jsx";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
+      <HowItWorks />
     </main>
   );
 }
