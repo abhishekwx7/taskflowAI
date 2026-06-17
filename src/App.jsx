@@ -3,6 +3,8 @@ import HeroDashBoard from "./components/HeroDashBoard.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Features from "./components/Features.jsx";
 import HowItWorks from "./components/HowItWorks.jsx";
+import Testimonials from "./components/Testimonials.jsx";
+import Pricing from "./components/Pricing.jsx";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Hero />
       <Features />
       <HowItWorks />
+      <Testimonials />
+      <Pricing />
     </main>
   );
 }
