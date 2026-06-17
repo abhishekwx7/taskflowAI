@@ -7,6 +7,7 @@ import Testimonials from "./components/Testimonials.jsx";
 import Pricing from "./components/Pricing.jsx";
 import Cta from "./components/Cta.jsx";
 import Faq from "./components/Faq.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Pricing />
       <Cta />
       <Faq />
+      <Footer />
     </main>
   );
 }

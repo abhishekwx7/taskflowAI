@@ -14,13 +14,15 @@ const Navbar = () => {
         <a href="#pricing" className="hover:text-white">
           Pricing
         </a>
-        <a href="#testinomials" className="hover:text-white">
+        <a href="#testimonials" className="hover:text-white">
           Testinomials
         </a>
       </nav>
 
-      <button className="rounded-full bg-cyan-400 px-5 py-2 text-m font-semibold text-slate-950 hover:bg-cyan-300">
-        Get Started
+      <button className="group relative overflow-hidden rounded-full bg-cyan-400 px-5 py-2 text-sm font-semibold text-slate-950 transition duration-300 hover:-translate-y-1 hover:bg-cyan-300 hover:shadow-lg hover:shadow-cyan-400/30 active:translate-y-0">
+        <span className="relative z-10">Get Started</span>
+
+        <span className="absolute inset-0 -translate-x-full bg-white/30 transition duration-500 group-hover:translate-x-full" />
       </button>
     </header>
   );
