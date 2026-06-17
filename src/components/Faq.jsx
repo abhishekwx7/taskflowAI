@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const faqs = [
   {
     question: "Can I use TaskFlow AI for free?",
@@ -31,7 +33,13 @@ const faqs = [
   },
 ];
 
-const FAQ = () => {
+const Faq = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const handleToggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <section className="mx-auto max-w-7xl px-6 py-24">
       <div className="mx-auto max-w-3xl text-center">
@@ -50,22 +58,35 @@ const FAQ = () => {
       </div>
 
       <div className="mx-auto mt-16 grid max-w-5xl gap-4 md:grid-cols-2">
-        {faqs.map((faq) => (
-          <div
-            key={faq.question}
-            className="group rounded-3xl border border-slate-800 bg-slate-900/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-slate-900 hover:shadow-xl hover:shadow-cyan-400/10"
-          >
-            <div className="flex items-start justify-between gap-4">
-              <h3 className="text-lg font-semibold">{faq.question}</h3>
+        {faqs.map((faq, index) => {
+          const isOpen = openIndex === index;
 
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cyan-400/10 text-cyan-300 transition duration-300 group-hover:rotate-45 group-hover:bg-cyan-400/20">
-                +
-              </span>
+          return (
+            <div
+              key={faq.question}
+              onClick={() => handleToggleFAQ(index)}
+              className="group cursor-pointer rounded-3xl border border-slate-800 bg-slate-900/60 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-slate-900 hover:shadow-xl hover:shadow-cyan-400/10"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-lg font-semibold">{faq.question}</h3>
+
+                <span
+                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cyan-400/10 text-cyan-300 transition duration-300 ${
+                    isOpen
+                      ? "rotate-45 bg-cyan-400/20"
+                      : "group-hover:rotate-45"
+                  }`}
+                >
+                  +
+                </span>
+              </div>
+
+              {isOpen && (
+                <p className="mt-4 leading-7 text-slate-400">{faq.answer}</p>
+              )}
             </div>
-
-            <p className="mt-4 leading-7 text-slate-400">{faq.answer}</p>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
